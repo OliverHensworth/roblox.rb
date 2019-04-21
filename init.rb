@@ -16,5 +16,13 @@ module ROBLOX
     def ROBLOX.getAsset(id)
         Http.get("https://api.roblox.com/marketplace/productinfo?assetId=#{id}")
     end
+    
+    def ROBLOX.getGroupRoles(id)
+        Http.get("https://groups.roblox.com/v1/groups/#{id}/roles")
+    end
+    
+    def ROBLOX.checkUsernameExists(name)
+        Http.get("https://www.roblox.com/UserCheck/DoesUsernameExist?username=#{name}")
+    end
 
 end
